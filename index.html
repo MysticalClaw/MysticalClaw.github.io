@@ -1,152 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mystical Claw - Official Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystical Claw - Official Site</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #1a1a1d, #2d2d34);
-      color: #f2f2f2;
-    }
+  /* Header as full image banner */
+  header {
+    width: 100%;
+    height: auto;
+  }
+  header img {
+    width: 100%;
+    display: block;
+    max-height: 600px; /* adjust to your image aspect ratio */
+    object-fit: cover;
+  }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: url('header-bg.jpg') center/cover no-repeat;
-      background-blend-mode: multiply;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
+  /* Sections */
+  section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
 
-    header h1 {
-      font-size: 48px;
-      margin: 0;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
+  h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4aa3ff;
+    padding-left: 10px;
+  }
 
-    header p {
-      margin-top: 12px;
-      font-size: 20px;
-      opacity: 0.9;
-    }
+  p, li {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
 
-    section {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
+  .game-card {
+    background: #26262b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
 
-    h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
-      border-left: 4px solid #4aa3ff;
-      padding-left: 10px;
-    }
+  .game-card h3 {
+    margin: 0;
+    font-size: 24px;
+  }
 
-    p, li {
-      font-size: 18px;
-      line-height: 1.6;
-      opacity: 0.95;
-    }
+  .cta-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #4aa3ff;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 12px;
+    transition: 0.25s;
+  }
 
-    .game-card {
-      background: #26262b;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
+  .cta-btn:hover {
+    background: #76c4ff;
+  }
 
-    .game-card h3 {
-      margin: 0;
-      font-size: 24px;
-    }
+  footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 15px;
+    opacity: 0.7;
+  }
 
-    .cta-btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #4aa3ff;
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 12px;
-      transition: 0.25s;
-    }
+  footer a {
+    color: #4aa3ff;
+    text-decoration: none;
+  }
 
-    .cta-btn:hover {
-      background: #76c4ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-      font-size: 15px;
-      opacity: 0.7;
-    }
-
-    footer a {
-      color: #4aa3ff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  footer a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Mystical Claw</h1>
-    <p>Crafting clean, polished, and fun mobile games.</p>
-  </header>
+<!-- Header Image -->
+<header>
+  <img src="header-image.png" alt="Mystical Claw Header Banner">
+</header>
 
-  <section>
-    <h2>About Us</h2>
+<!-- About Section -->
+<section>
+  <h2>About Us</h2>
+  <p>
+    Mystical Claw is an independent game brand focused on creating
+    smooth, engaging, and enjoyable gameplay experiences for mobile.
+    Every game is designed with careful attention to detail, high performance,
+    and clean visuals.
+  </p>
+</section>
+
+<!-- Games Section -->
+<section>
+  <h2>Our Games</h2>
+  <div class="game-card">
+    <h3>Mine Merge</h3>
     <p>
-      Mystical Claw is an independent game brand focused on creating
-      smooth, engaging, and enjoyable gameplay experiences for mobile.
-      Every game is designed with careful attention to detail, high performance,
-      and clean visuals.
+      Drop, merge, and evolve minerals in this relaxing casual merging game.
+      Simple mechanics, satisfying physics, and soft visuals.
     </p>
-  </section>
+    <a href="#" class="cta-btn">Google Play (Coming Soon)</a>
+  </div>
+</section>
 
-  <section>
-    <h2>Our Games</h2>
-
-    <div class="game-card">
-      <h3>Mine Merge</h3>
-      <p>
-        Drop, merge, and evolve minerals in this relaxing casual merging game.
-        Simple mechanics, satisfying physics, and soft visuals.
-      </p>
-      <a href="#" class="cta-btn">Google Play (Coming Soon)</a>
-    </div>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>
-      For support or inquiries:
-      <br />
-      <strong>Email:</strong>
-      <a href="mailto:contact@mysticalclaw.com" style="color:#4aa3ff;">contact@mysticalclaw.com</a>
-    </p>
-  </section>
-
-  <footer>
-    © 2025 Mystical Claw  
+<!-- Contact Section -->
+<section>
+  <h2>Contact</h2>
+  <p>
+    For support or inquiries:
     <br />
-    <a href="privacy.html">Privacy Policy</a>
-  </footer>
+    <strong>Email:</strong>
+    <a href="mailto:contact@mysticalclaw.com" style="color:#4aa3ff;">contact@mysticalclaw.com</a>
+  </p>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2025 Mystical Claw  
+  <br />
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
 
 </body>
 </html>
