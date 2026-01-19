@@ -17,7 +17,26 @@
       "downloads": "10K+",
       "featured": true
     }
+    ,
+     {
+    "id": "Bagh_Chal",
+    "name": "Bagh Chal",
+    "emoji": "🐅",
+    "description": "Classic Nepalese strategy board game. Play as Tigers or Goats in turn-based local, AI, or online matches. Features smart AI, difficulty levels, and intuitive touch controls for mobile devices.",
+    "image": "games/BaghChal.png",
+    "tags": ["Strategy", "Board Game", "AI", "Turn-based"],
+    "platform": "Mobile",
+    "status": "available",
+    "playStoreId": "com.mysticalclaw.baghchal",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.mysticalclaw.baghchal",
+    "appStoreUrl": null,
+    "releaseDate": "2026-01-19",
+    "rating": 4.7,
+    "downloads": "5K+",
+    "featured": true
+  }
   ],
+  
   "comingSoon": [
     {
       "id": "game-2",
