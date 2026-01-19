@@ -1,145 +1,649 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mystical Claw - Official Site</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #121212;
-    color: #f2f2f2;
-    line-height: 1.6;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mystical Claw - Indie game developer creating engaging games for mobile. Download our games on Google Play Store.">
+  <meta name="keywords" content="indie games, mobile games, game developer, mine merge, unity games">
+  <meta name="author" content="Mystical Claw">
+  
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Mystical Claw - Indie Game Developer">
+  <meta property="og:description" content="Discover engaging mobile games crafted with care. Download Mine Merge and more on Google Play.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mysticalclaw.github.io/">
+  
+  <title>Mystical Claw - Indie Game Developer</title>
+  <link rel="icon" type="image/png" href="DeveloperIcon.png">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* Header as full image banner */
-  header {
-    width: 100%;
-    height: auto;
-  }
-  header img {
-    width: 100%;
-    display: block;
-    max-height: 600px; /* adjust to your image aspect ratio */
-    object-fit: cover;
-  }
+    :root {
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --primary-dark: #4f46e5;
+      --accent: #06b6d4;
+      --dark-bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --border: #334155;
+    }
 
-  /* Sections */
-  section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    border-left: 4px solid #4aa3ff;
-    padding-left: 10px;
-  }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-  p, li {
-    font-size: 18px;
-    line-height: 1.6;
-    opacity: 0.95;
-  }
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
+    }
 
-  .game-card {
-    background: #26262b;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
 
-  .game-card h3 {
-    margin: 0;
-    font-size: 24px;
-  }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+    }
 
-  .cta-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #4aa3ff;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 12px;
-    transition: 0.25s;
-  }
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
 
-  .cta-btn:hover {
-    background: #76c4ff;
-  }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    font-size: 15px;
-    opacity: 0.7;
-  }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-  footer a {
-    color: #4aa3ff;
-    text-decoration: none;
-  }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
-  footer a:hover {
-    text-decoration: underline;
-  }
-</style>
+    /* Hero Section */
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 10px;
+      border: 2px solid var(--primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 15px;
+    }
+
+    .cta-btn:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    }
+
+    .cta-btn.secondary {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .cta-btn.secondary:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    section h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      margin-bottom: 48px;
+      text-align: center;
+      color: var(--text-primary);
+    }
+
+    /* About Section */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-content p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .about-content ul {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .about-content li {
+      padding: 12px 0;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .about-content li:before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .about-icon {
+      width: 100%;
+      max-width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-icon img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
+
+    /* Games Section */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .game-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .game-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(6, 182, 212, 0.1);
+    }
+
+    .game-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      display: block;
+    }
+
+    .game-image.placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+    }
+
+    .game-content {
+      padding: 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .game-card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .game-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .game-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--primary);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .game-card .cta-btn {
+      width: 100%;
+      justify-content: center;
+      margin-top: 0;
+    }
+
+    /* Contact Section */
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s;
+      font-size: 15px;
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .social-link {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 20px;
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+      transform: translateY(-4px);
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(15, 23, 42, 0.5);
+      border-top: 1px solid var(--border);
+      padding: 40px 20px;
+      margin-top: 80px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h4 {
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 12px;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .about-icon {
+        order: -1;
+      }
+
+      .games-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Header Image -->
-<header>
-  <img src="header-bg.jpg" alt="Mystical Claw Header Banner">
-</header>
+<!-- Navigation -->
+<nav>
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <img src="DeveloperIcon.png" alt="Mystical Claw">
+      Mystical Claw
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+  </div>
+</nav>
 
-<!-- About Section -->
-<section>
-  <h2>About Us</h2>
-  <p>
-    Mystical Claw is an independent game brand focused on creating
-    smooth, engaging, and enjoyable gameplay experiences for mobile.
-    Every game is designed with careful attention to detail, high performance,
-    and clean visuals.
-  </p>
-</section>
-
-<!-- Games Section -->
-<section>
-  <h2>Our Games</h2>
-  <div class="game-card">
-    <h3>Mine Merge</h3>
-    <p>
-      Drop, merge, and evolve minerals in this relaxing casual merging game.
-      Simple mechanics, satisfying physics, and soft visuals.
-    </p>
-    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fplay.google.com%2Fapps%2Finternaltest%2F4701748064628143934%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExNFpLOVhyWEtjaXlya05lRHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6U8uUU-EEUYklZgRfQDbi_FVHNahlWAjlx-3BYNN7r1GbJdHVqC2pD6U42rA_aem_iv88ZeE52KRdk6jyqlGDiQ&h=AT2kDyhUoZqwQkVePe6wJ9f8qAG-CcHykGzJX5PBIqw1NA49pEygi0FIHPSRUga6DdqNR6mM-e8jqUXXGv0eCjagCwQDbdDi994OOaPCXrxis2iXL-C51MCN82KASinbnHhA2w" class="cta-btn">Google Play (Coming Soon)</a>
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Crafting Engaging Games</h1>
+  <p>Welcome to Mystical Claw! We're an independent game studio dedicated to creating smooth, engaging, and enjoyable gaming experiences for mobile devices.</p>
+  <div class="cta-buttons">
+    <a href="#games" class="cta-btn">Explore Games</a>
+    <a href="#contact" class="cta-btn secondary">Get in Touch</a>
   </div>
 </section>
 
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="about-content">
+    <h2>About Mystical Claw</h2>
+    <p>We are an independent game development studio driven by passion and creativity. Our mission is to deliver high-quality, engaging games that bring joy to players worldwide.</p>
+    <p>Every game we create is designed with meticulous attention to detail, emphasizing smooth mechanics, beautiful visuals, and satisfying gameplay loops.</p>
+    <ul>
+      <li>Made with Unity</li>
+      <li>Mobile-first design</li>
+      <li>Indie-powered</li>
+      <li>Player-focused</li>
+      <li>Continuously improving</li>
+    </ul>
+  </div>
+  <div class="about-icon">
+    <img src="DeveloperIcon.png" alt="Mystical Claw Logo">
+  </div>
+</section>
+
+<!-- Games Section -->
+<section id="games">
+  <h2>Our Games</h2>
+  <div class="games-grid" id="gamesContainer">
+    <!-- Games loaded dynamically from games.json -->
+    <div style="text-align: center; padding: 40px; color: var(--text-secondary);">Loading games...</div>
+  </div>
+  <p style="text-align: center; margin-top: 40px; color: var(--text-secondary);" id="comingSoonText">More games coming soon! Follow us for updates.</p>
+</section>
+
 <!-- Contact Section -->
-<section>
-  <h2>Contact</h2>
-  <p>
-    For support or inquiries:
-    <br />
-    <strong>Email:</strong>
-    <a href="mailto:mysticalclaw@gmail.com" style="color:#4aa3ff;">mysticalclaw@gmail.com</a>
-  </p>
+<section id="contact" class="contact">
+  <h2>Get in Touch</h2>
+  <p>Have questions, feedback, or partnership opportunities? We'd love to hear from you!</p>
+  
+  <div class="contact-links">
+    <a href="mailto:mysticalclaw@gmail.com" class="contact-link">📧 Email</a>
+    <a href="https://twitter.com/MysticallClaw" class="contact-link" target="_blank">𝕏 Twitter</a>
+  </div>
+
+  <h3 style="color: var(--text-secondary); font-size: 18px; margin-top: 32px;">Follow Us</h3>
+  <div class="social-links">
+    <a href="https://twitter.com/mysticalclaw" class="social-link" title="Twitter" target="_blank">𝕏</a>
+    <a href="https://instagram.com/mysticalclaw" class="social-link" title="Instagram" target="_blank">📷</a>
+    <a href="https://youtube.com/@mysticalclaw" class="social-link" title="YouTube" target="_blank">▶️</a>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer>
-  © 2025 Mystical Claw  
-  <br />
-  <a href="privacy.html">Privacy Policy</a>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Mystical Claw</h4>
+      <p style="color: var(--text-secondary); font-size: 14px; margin: 0;">Independent game studio creating engaging mobile games with Unity.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Games</h4>
+      <ul>
+        <li><a href="https://play.google.com/store/apps/details?id=com.mysticalclaw.minemerge" target="_blank">Mine Merge</a></li>
+        <li><a href="#games">More Coming Soon</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Mystical Claw. All rights reserved. | Made with ❤️ by an indie developer</p>
+  </div>
 </footer>
+
+<script>
+  // Auto-update copyright year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Games data embedded directly
+  const gamesData = {
+    "games": [
+      {
+        "id": "mine-merge",
+        "name": "Mine Merge",
+        "emoji": "🏔️",
+        "description": "Drop, merge, and evolve minerals in this relaxing casual merging game. Simple mechanics, satisfying physics, and beautiful visuals create an addictive gameplay loop.",
+        "image": "games/mine-merge.png",
+        "tags": ["Casual", "Merging", "Relaxing"],
+        "status": "available",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.mysticalclaw.minemerge"
+      }
+    ]
+  };
+
+  // Load games from JSON or embedded data
+  async function loadGames() {
+    try {
+      const response = await fetch('games.json');
+      if (response.ok) {
+        const data = await response.json();
+        renderGames(data.games);
+      } else {
+        renderGames(gamesData.games);
+      }
+    } catch (error) {
+      console.log('Using embedded games data');
+      renderGames(gamesData.games);
+    }
+  }
+
+  // Render games dynamically
+  function renderGames(games) {
+    const container = document.getElementById('gamesContainer');
+    
+    if (!games || games.length === 0) {
+      container.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No games available yet.</p>';
+      return;
+    }
+
+    container.innerHTML = games.map(game => `
+      <div class="game-card">
+        ${game.image 
+          ? `<img src="${game.image}" alt="${game.name}" class="game-image" onerror="this.style.display='none'">`
+          : ''
+        }
+        <div class="game-content">
+          <h3>${game.emoji} ${game.name}</h3>
+          <p>${game.description}</p>
+          <div class="game-tags">
+            ${game.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+          </div>
+          ${game.status === 'available' 
+            ? `<a href="${game.playStoreUrl}" class="cta-btn" target="_blank">📥 Download on Google Play</a>`
+            : `<button class="cta-btn" disabled style="opacity: 0.6; cursor: not-allowed;">Coming Soon</button>`
+          }
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Load games when page loads
+  document.addEventListener('DOMContentLoaded', loadGames);
+</script>
 
 </body>
 </html>

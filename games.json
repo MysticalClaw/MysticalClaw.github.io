@@ -1,0 +1,33 @@
+{
+  "games": [
+    {
+      "id": "Merge_Lab",
+      "name": "MergeLab",
+      "emoji": "🏔️",
+      "description": "Drop, merge, and evolve minerals in this relaxing casual merging game. Simple mechanics, satisfying physics, and beautiful visuals create an addictive gameplay loop.",
+      "image": "games/MergeLab.png",
+      "tags": ["Casual", "Merging", "Relaxing"],
+      "platform": "Mobile",
+      "status": "available",
+      "playStoreId": "com.mysticalclaw.minemerge",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.mysticalclaw.minemerge",
+      "appStoreUrl": null,
+      "releaseDate": "2025-12-01",
+      "rating": 4.5,
+      "downloads": "10K+",
+      "featured": true
+    }
+  ],
+  "comingSoon": [
+    {
+      "id": "game-2",
+      "name": "Game Title",
+      "emoji": "🎮",
+      "description": "Coming soon...",
+      "image": "games/game-2.png",
+      "tags": ["Action"],
+      "status": "coming-soon",
+      "expectedDate": "Q1 2026"
+    }
+  ]
+}
